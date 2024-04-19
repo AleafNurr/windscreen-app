@@ -10,9 +10,10 @@
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5",
     "@emotion/server": "latest",
+    "@emotion/styled": "^11.11.5",
     "@mui/material": "^5.15.15",
+    "@mui/system": "^5.15.15",
     "@remix-run/node": "^2.8.0",
     "@remix-run/react": "^2.8.0",
     "@remix-run/server-runtime": "^2.8.0",
