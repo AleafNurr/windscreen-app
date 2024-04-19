@@ -1,6 +1,8 @@
 import type { MetaFunction } from "@vercel/remix";
 
-import Home from "~/src/home";
+import ServiceCards from '~/src/components/serviceCards';
+import FormCard from '~/src/components/formCard';
+import ContactCards from '~/src/components/contactCards';
 
 export const meta: MetaFunction = () => {
   return [
@@ -11,6 +13,10 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <Home />
+    <>
+      <ServiceCards />
+      <FormCard />
+      <ContactCards />
+    </>
   );
 }
