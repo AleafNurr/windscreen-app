@@ -5,7 +5,7 @@ import Menu from "./components/navigation";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
     return (
-      <Box>
+      <Box> 
         <Banner />
         <Menu />
         {children}

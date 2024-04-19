@@ -5,7 +5,7 @@ import theme from "../mui/theme";
 export default function Menu(){
     return(
         <Box sx={{
-                border: '1px dashed grey',
+                width: '100%',
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
