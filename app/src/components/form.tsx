@@ -1,9 +1,11 @@
 import { TextField, Stack, Grid, Button, } from "@mui/material";
 import { useState } from "react";
+import { Form as RemixForm } from "@remix-run/react";
 
+import type { FormStateData } from "~/types/formStateData";
 import SubmitDialog from "./Form/submitDialog";
 
-const formState = {
+const formState: FormStateData = {
     first: '',
     last: '',
     phone: '',
@@ -30,11 +32,6 @@ export default function Form(){
             [name]:value
         })
     }
-    /* Form TODO: On submit, wrap to json and send to cloud DB */
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        console.log(values);
-    }
 
     /* Dialog */
     const handleClick = () => {
@@ -49,7 +46,7 @@ export default function Form(){
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
+            <RemixForm method="post">
                 <Grid container justifyContent='center' rowSpacing={4}>
                     <Grid item>
                         <TextField variant='standard' label='First Name' name='first' value={values.first} onChange={handleChange}/>
@@ -76,7 +73,7 @@ export default function Form(){
                         onClose={handleClose} 
                     />
                 </Stack>
-            </form>
+            </RemixForm>
         </>
     );
 }
