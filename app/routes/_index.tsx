@@ -8,7 +8,7 @@ import ServiceCards from '~/src/components/serviceCards';
 import FormCard from '~/src/components/formCard';
 import ContactCards from '~/src/components/contactCards';
 
-import type { FormStateData } from "~/types/formStateData";
+import type { FormStateData } from "~/src/types/formStateData";
 
 export const meta: MetaFunction = () => {
   return [
