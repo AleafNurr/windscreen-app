@@ -5,7 +5,7 @@ function Copyright(){
         <Typography variant='body2' color='black'>
             {'Copyright © '}
             <Link color='inherit' href='https://mui.com/'>
-                Working Title Name
+                Mercury Bay Glass & Windscreens
             </Link>
             {' '}
             {new Date().getFullYear()}
