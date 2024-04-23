@@ -2,7 +2,7 @@ import { TextField, Stack, Grid, Button, } from "@mui/material";
 import { useState } from "react";
 import { Form as RemixForm } from "@remix-run/react";
 
-import type { FormStateData } from "~/types/formStateData";
+import type { FormStateData } from "~/src/types/formStateData";
 import SubmitDialog from "./Form/submitDialog";
 
 const formState: FormStateData = {
