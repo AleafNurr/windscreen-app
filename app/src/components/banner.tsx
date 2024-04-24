@@ -1,5 +1,5 @@
 import { Box, Typography, useTheme, useMediaQuery } from "@mui/material";
-import logo from "~/src/assets/Logo-draft-.png";
+import logo from "~/src/assets/Logo-draft-5.png";
 
 export default function Banner(){
     const theme = useTheme();
