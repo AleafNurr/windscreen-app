@@ -10,13 +10,13 @@ export default function Menu(){
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                backgroundColor: theme.palette.secondary.main
+                backgroundColor: "black"
                 }}>
             <Stack direction='row' spacing={2}>
-                <Button component={Link} to="/" sx={{ color: 'black' }}>
+                <Button component={Link} to="/" sx={{ color: 'rgba(0,212,255,1)' }}>
                     Home
                 </Button>
-                <Button component={Link} to="/about" sx={{ color: 'black' }}>
+                <Button component={Link} to="/about" sx={{ color: 'rgba(0,212,255,1)' }}>
                     About
                 </Button>
             </Stack>
