@@ -17,7 +17,7 @@ export default function ContactCards(){
                 </Card>
                 <Card sx={{backgroundColor: theme.palette.secondary.light, width: '100%', textAlign: 'center'}}>
                     <h1>Email</h1>
-                    <p id="content2">businessname@example.com</p>
+                    <p id="content2">mercurybayglassandwindscreens@example.com</p>
                 </Card>
                 <Card sx={{backgroundColor: theme.palette.secondary.light, width: '100%', textAlign: 'center'}}>
                     <h1>Location</h1>

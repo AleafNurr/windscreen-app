@@ -1,8 +1,11 @@
-import { Box, Typography, Card  } from "@mui/material";
+import { Box, Typography, Card, useMediaQuery, useTheme  } from "@mui/material";
 import theme from "../mui/theme";
 import Form from "./form";
 
 export default function FormCard() {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
     return (
         <Box
             sx={{
@@ -14,11 +17,10 @@ export default function FormCard() {
         >
             <Card
                 sx={{
-                    maxWidth: '50%',
+                    padding: '2rem',
+                    borderRadius: 2,
+                    width: isMobile ? '80%' : '50%',
                     margin: '0 auto',
-                    marginTop: '1rem',
-                    marginBottom: '1rem',
-                    padding: '1rem',
                 }}
             >
                 <Typography variant="h3">Get A Free Quote</Typography>
