@@ -4,9 +4,9 @@ import { kv } from "@vercel/kv";
 import type { ActionFunctionArgs } from "@remix-run/node";
 // import { Resend } from "resend";
 
-import ServiceCards from '~/src/components/serviceCards';
-import FormCard from '~/src/components/formCard';
-import ContactCards from '~/src/components/contactCards';
+import Service from '~/src/components/Service/service';
+import FormCard from '~/src/components/Form/formCard';
+import ContactCards from '~/src/components/Contact/contactCards';
 
 import type { FormStateData } from "~/src/types/formStateData";
 
@@ -63,7 +63,7 @@ export async function action({
 export default function Index() {
   return (
     <>
-      <ServiceCards />
+      <Service />
       <FormCard />
       <ContactCards />
     </>
