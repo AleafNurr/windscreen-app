@@ -1,4 +1,5 @@
 import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
+import theme from "../../mui/theme";
 
 import backgroundImage from "./assets/bg-asset-2.png";
 
@@ -20,6 +21,8 @@ export default function Service(){
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
+            backgroundAttachment: 'fixed',
+            width: '100%',
         }}>
             {
             isMobile ? (<Typography variant="h3" sx={{color: 'black' }}>Our Services</Typography>) : 
