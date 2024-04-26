@@ -17,6 +17,12 @@ const theme = createTheme({
       main: '#AA4A44',
     },
   },
+  typography: {
+    allVariants: {
+      fontFamily: 'Arial',
+    },
+
+  },
 });
 
 export default theme;
