@@ -18,11 +18,9 @@ export default function Service(){
             alignItems: 'center',
             justifyContent: 'center',
             backgroundImage: `url(${backgroundImage})`,
-            backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
             backgroundAttachment: 'fixed',
-            width: '100%',
         }}>
             {
             isMobile ? (<Typography variant="h3" sx={{color: 'black' }}>Our Services</Typography>) : 
