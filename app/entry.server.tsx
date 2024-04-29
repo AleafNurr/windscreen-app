@@ -11,7 +11,7 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 import { CacheProvider } from '@emotion/react';
 import createEmotionServer from '@emotion/server/create-instance';
 import {RemixServer} from "@remix-run/react";
-import {EntryContext} from "@remix-run/node";
+import type {EntryContext} from "@remix-run/node";
 
 export default function handleRequest(
   request: Request,
