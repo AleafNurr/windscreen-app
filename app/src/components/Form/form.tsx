@@ -1,6 +1,6 @@
 import { TextField, Stack, Grid, Button, } from "@mui/material";
 import { useState } from "react";
-import { Form as RemixForm } from "@remix-run/react";
+import { Form as RemixForm } from "@remix-run/react"; // used to handle form submission
 
 import type { FormStateData } from "~/src/types/formStateData";
 import SubmitDialog from "./submitDialog";
@@ -26,7 +26,8 @@ export default function Form(){
 
     /* Form */
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>{
-        const { name, value } = e.target
+        const { name, value } = e.target // destructuring the name and value from the event target
+        // setting the values of the form
         setValues({
             ...values,
             [name]:value
@@ -49,14 +50,14 @@ export default function Form(){
             <RemixForm method="post">
                 <Grid container justifyContent='center' rowSpacing={4}>
                     <Grid item>
-                        <TextField variant='standard' label='First Name' name='first' value={values.first} onChange={handleChange}/>
-                        <TextField variant='standard' label='Last Name' name='last' value={values.last} onChange={handleChange}/>
-                        <TextField variant='standard' label='Phone' name='phone' value={values.phone} onChange={handleChange}/>
+                        <TextField required variant='standard' label='First Name' name='first' value={values.first} onChange={handleChange}/>
+                        <TextField required variant='standard' label='Last Name' name='last' value={values.last} onChange={handleChange}/>
+                        <TextField required variant='standard' label='Phone' name='phone' value={values.phone} onChange={handleChange}/>
                     </Grid>
                     <Grid item>
-                        <TextField variant='standard' label='Email' name='email' value={values.email} onChange={handleChange}/>
-                        <TextField variant='standard' label='Repair Address' name='address' value={values.address} onChange={handleChange}/>
-                        <TextField variant='standard' label='Rego' name='rego' value={values.rego} onChange={handleChange}/>
+                        <TextField required variant='standard' label='Email' name='email' value={values.email} onChange={handleChange}/>
+                        <TextField required variant='standard' label='Repair Address' name='address' value={values.address} onChange={handleChange}/>
+                        <TextField required variant='standard' label='Rego' name='rego' value={values.rego} onChange={handleChange}/>
                     </Grid>
                     <Grid item>
                         <TextField variant='standard' label='Model' name='model' value={values.model} onChange={handleChange}/>
@@ -71,6 +72,9 @@ export default function Form(){
                         closeOption={text}
                         open={open}
                         onClose={handleClose} 
+                        filledOut={
+                            values.first !== '' && values.last !== '' && values.phone !== '' && values.email !== '' && values.address !== '' && values.rego !== ''
+                        }
                     />
                 </Stack>
             </RemixForm>
