@@ -1,7 +1,7 @@
 import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import theme from "../../mui/theme";
 
-import backgroundImage from "./assets/bg-asset-2.png";
+import backgroundImage from "./assets/bg-asset-2.jpg";
 
 import ServiceCards from "./serviceCards";
 
