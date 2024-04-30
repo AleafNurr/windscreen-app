@@ -1,7 +1,8 @@
 import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import theme from "../../mui/theme";
 
-import backgroundImage from "./assets/bg-asset-2.jpg";
+import backgroundImageLarge from "./assets/bg-asset-large.jpg";
+import backgroundImageSmall from "./assets/bg-asset-small.jpg";
 
 import ServiceCards from "./serviceCards";
 
@@ -17,7 +18,11 @@ export default function Service(){
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            backgroundImage: `url(${backgroundImage})`,
+            backgroundImage: {
+                xs: `url(${backgroundImageSmall})`,
+                sm: `url(${backgroundImageSmall})`,
+                md: `url(${backgroundImageLarge})` 
+            },
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
             backgroundAttachment: 'fixed',
