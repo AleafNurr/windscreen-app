@@ -3,7 +3,8 @@ import theme from "../../mui/theme";
 import Form from "./form";
 
 import FormSVG from './assets/layered-waves-haikei.svg';
-import CardSVG from './assets/blob-scene-haikei.svg';
+import CardSVGMedium from './assets/blob-scene-haikei-medium.svg';
+import CardSVGLarge from './assets/blob-scene-haikei-large.svg';
 
 export default function FormCard() {
     const theme = useTheme();
@@ -24,7 +25,12 @@ export default function FormCard() {
             <Card
                 sx={{
                     backgroundColor: 'white',
-                    backgroundImage: `url(${CardSVG})`,
+                    backgroundImage: {
+                        xs: `url(${CardSVGMedium})`,
+                        sm: `url(${CardSVGMedium})`,
+                        md: `url(${CardSVGLarge})`,
+                        lg: `url(${CardSVGLarge})`,
+                    },
                     backgroundRepeat: 'no-repeat',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
