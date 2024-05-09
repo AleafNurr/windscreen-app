@@ -65,7 +65,7 @@ export default function Index() {
     <>
       <Service />
       <FormCard />
-      <ContactCards />
+      <ContactCards showText={true}/>
     </>
   );
 }

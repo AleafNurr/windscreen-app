@@ -1,7 +1,7 @@
 import { Box, Card, Stack, Typography } from "@mui/material";
 import theme from "../../mui/theme";
 
-export default function ContactCards(){
+export default function ContactCards(props: {showText: boolean}){
     return(
         <Box sx={{ 
                 pt: 2, 
@@ -9,7 +9,7 @@ export default function ContactCards(){
                 height: "100%",
                 textAlign: 'center'
                 }}>
-            <Typography variant="h3">Contact Us</Typography>
+            {props.showText? <Typography variant="h3">Contact Us</Typography> : null}
             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} sx={{margin: '2rem'}} alignItems="center">
                 <Card sx={{ backgroundColor: theme.palette.secondary.light, width: '100%', textAlign: 'center'}}>
                     <h1>Phone</h1>
