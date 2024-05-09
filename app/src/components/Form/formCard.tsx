@@ -1,4 +1,5 @@
-import { Box, Typography, Card, useMediaQuery, useTheme  } from "@mui/material";
+import { Box, Typography, Card, useMediaQuery, useTheme, Button  } from "@mui/material";
+import { Link } from "@remix-run/react";
 import theme from "../../mui/theme";
 import Form from "./form";
 
@@ -34,7 +35,7 @@ export default function FormCard() {
                     backgroundRepeat: 'no-repeat',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
-                    padding: '2rem',
+                    pt: '2rem',
                     borderRadius: 2,
                     width: isMobile ? '80%' : '50%',
                     margin: '0 auto',
@@ -43,6 +44,7 @@ export default function FormCard() {
             >
                 <Typography variant="h3">Get A Free Quote</Typography>
                 <Form />
+                <Button variant="text" color="primary" component={Link} to="/privacy">Privacy Policy</Button>
             </Card>
         </Box>
     );
